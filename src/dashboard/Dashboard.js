@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react"
 
-import Display from '../display/Display';
-import Controls from '../controls/Controls';
+import Display from "../display/Display"
+import Controls from "../controls/Controls"
 
 class Dashboard extends React.Component {
   state = {
     locked: false,
-    closed: false,
-  };
+    closed: false
+  }
 
   render() {
-    const { closed, locked } = this.state;
+    const { closed, locked } = this.state
 
     return (
       <>
@@ -22,16 +22,16 @@ class Dashboard extends React.Component {
           toggleClosed={this.toggleClosed}
         />
       </>
-    );
+    )
   }
 
   toggleLocked = () => {
-    this.setState(prev => ({ locked: !prev.locked }));
-  };
+    this.setState(prev => ({ locked: !prev.locked }))
+  }
 
   toggleClosed = () => {
-    this.setState(prev => ({ closed: !prev.closed }));
-  };
+    this.setState(prev => ({ closed: !prev.closed }))
+  }
 }
 
-export default Dashboard;
+export default Dashboard
